@@ -1,8 +1,8 @@
 @import "template";
 
 @keyframes backgroundGradient {
-    0%{background-position:0% 70%}
-    100%{background-position:100% 10%}
+    0%{background-position:0% 100%}
+    100%{background-position:100% 0%}
 }
   
 body.page.index{
@@ -12,10 +12,10 @@ body.page.index{
     background: $color-background;
     background: linear-gradient(45deg, darken($color-background, 80%), darken($color-background, 100%),  darken($color-background, 20%), $color-background);
     background-size: 400% 400%;
-    background-position:100% 10%;
+    background-position:100% 0%;
 
     animation-name: backgroundGradient;
-    animation-duration: 8s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 
@@ -56,7 +56,7 @@ body.page.index{
             filter: drop-shadow(-4px 5px 8px rgba(0, 0, 0, 0.45));
             max-width: 30%;
             animation-name: dropshadow;
-            animation-duration: 4s;
+            animation-duration: 6s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: 1;
         }
@@ -70,14 +70,14 @@ body.page.index{
             letter-spacing: 0;
             text-rendering: optimizeSpeed;
             animation-name: textshadow;
-            animation-duration: 4s;
+            animation-duration: 6s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: 1;
         }
 
     }
     @keyframes textApare {
-        0%,60% {
+        0%,80% {
             opacity: 0;
         }
 
@@ -88,7 +88,7 @@ body.page.index{
     main, footer{
         opacity: 1;
         animation-name: textApare;
-        animation-duration: 4s;
+        animation-duration: 6s;
         animation-delay: 0s;
         animation-fill-mode: after;
         animation-timing-function: ease-in-out;
