@@ -1,0 +1,98 @@
+@import "template";
+
+@keyframes backgroundGradient {
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+}
+  
+body.page.index{
+
+    background-color: $color-background;
+    background-image: linear-gradient(45deg, darken($color-background, 100%), darken($color-background, 80%),  darken($color-background, 20%),  $color-background);
+    background: $color-background;
+    background: linear-gradient(45deg, darken($color-background, 100%), darken($color-background, 80%),  darken($color-background, 20%), $color-background);
+    background-size: 400% 400%;
+    background-position:100% 50%;
+
+    animation-name: backgroundGradient;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+
+    @keyframes textshadow {
+        from {
+            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+        }
+        to {
+            text-shadow: -4px 5px 8px rgba(0, 0, 0, 0.34);
+        }
+    }
+
+
+    @keyframes dropshadow {
+        from {
+            filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.0));
+        }
+        to {
+            filter: drop-shadow(-4px 5px 8px rgba(0, 0, 0, 0.45));
+        }
+    }
+
+    header{
+        text-align: center;
+        .sub{
+            text-align: center;
+            font-family: $font-family-subheading;
+            margin-top: $style-margin-medium;
+            margin-bottom: $style-margin-medium;
+        }
+    }
+
+    header.logo{
+        margin-top: $style-margin-large*2;
+        margin-bottom: $style-margin-large;
+
+        img{
+            filter: drop-shadow(-4px 5px 8px rgba(0, 0, 0, 0.45));
+            max-width: 30%;
+            animation-name: dropshadow;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+        h1{
+            font-family: $font-family-logo;
+            font-size: calc(2vw + 2.875rem);
+            text-shadow: -4px 5px 8px rgba(0, 0, 0, 0.34);
+            font-weight: bold;
+            font-kerning: none;
+            font-stretch: normal;
+            letter-spacing: 0;
+            text-rendering: optimizeSpeed;
+            animation-name: textshadow;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+
+    }
+    @keyframes textApare {
+        0%,60% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    main, footer{
+        opacity: 1;
+        animation-name: textApare;
+        animation-duration: 4s;
+        animation-delay: 0s;
+        animation-fill-mode: after;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+}
+

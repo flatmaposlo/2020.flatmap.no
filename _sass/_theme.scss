@@ -1,0 +1,223 @@
+@import "reset";
+
+/* color */
+$color-white: #FFF;
+$color-gray: #888;
+$color-gray-light: lighten($color-gray, 20%);
+$color-gray-lighter: lighten($color-gray, 50%);
+$color-gray-dark: darken($color-gray, 20%);
+$color-gray-darker: darken($color-gray, 40%);
+$color-gray-dark-transparent: rgba(3, 3, 3, .85);
+$color-black: #212121;
+
+$color-change: 30%;
+
+$color-cyan: #00BCD4;
+$color-cyan-light: lighten($color-cyan, $color-change);
+$color-cyan-dark: darken($color-cyan, $color-change);
+
+$color-green: #4CAF50;
+$color-green-light: lighten($color-green, $color-change);
+$color-green-dark: darken($color-green, $color-change);
+
+$color-light-green: #8BC34A;
+$color-light-green-light: lighten($color-light-green, $color-change);
+$color-light-green-dark: darken($color-light-green, $color-change);
+
+$color-blue: #2196F3;
+$color-blue-light: lighten($color-blue, $color-change);
+$color-blue-dark: darken($color-blue, $color-change);
+
+$color-light-blue: #03A9F4;
+$color-light-blue-light: lighten($color-light-blue, $color-change);
+$color-light-blue-dark: darken($color-light-blue, $color-change);
+
+$color-indigo: #3f51b5;
+$color-indigo-light: lighten($color-indigo, $color-change);
+$color-indigo-dark: darken($color-indigo, $color-change);
+
+$color-deep-purple: #673ab7;
+$color-deep-purple-light: lighten($color-deep-purple, $color-change);
+$color-deep-purple-dark: darken($color-deep-purple, $color-change);
+
+$color-purple: #9C27B0;
+$color-purple-light: lighten($color-purple, $color-change);
+$color-purple-dark: darken($color-purple, $color-change);
+
+$color-red: #F44336;
+$color-red-light: lighter($color-red, $color-change);
+$color-red-dark: darken($color-red, $color-change);
+
+$color-amber: #FFC107;
+$color-amber-light: lighter($color-amber, $color-change);
+$color-amber-dark: darken($color-amber, $color-change);
+
+$color-orange: #FF9800;
+$color-orange-light: lighter($color-orange, $color-change);
+$color-orange-dark: darken($color-orange, $color-change);
+
+$color-deep-orange: #FF5722;
+$color-deep-orange-light: lighter($color-deep-orange, $color-change);
+$color-deep-orange-dark: darken($color-deep-orange, $color-change);
+
+$color-pink: #E91E63;
+$color-pink-light: lighter($color-pink, $color-change);
+$color-pink-dark: darken($color-pink, $color-change);
+
+$color-blue-gray: #607D8B;
+$color-blue-gray-light: lighter($color-blue-gray, $color-change);
+$color-blue-gray-dark: darken($color-blue-gray, $color-change);
+
+/* Theme color */
+$color-background: $color-white;
+$color-text: $color-gray-dark;
+$color-link: $color-gray-dark;
+$color-main: $color-light-blue;
+
+$font-family-logo: 'Roboto Slab', serif;
+$font-family-heading: 'Roboto', cursive;
+$font-family-subheading: 'Roboto Slab', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+$style-bold: 500;
+$style-bolder: 800;
+
+$arrow: '\27A4';
+$arrow-down: '\25BC';
+
+$unit: 0.15rem;
+
+$border-width: $unit;
+
+$style-border: $unit solid $color-gray-light;
+$style-border-transparent: 0.1rem solid transparent;
+
+$style-box-shadow: 0 0 0.5rem $color-gray-darker;
+$style-text-shadow: 0px 0px 0.5rem #000000, 0px 0px 0.2rem #000000;
+$style-margin: $unit * 2;
+$style-margin-medium: $style-margin * 3;
+$style-margin-large: $style-margin * 10;
+$style-margin-xlarge: $style-margin * 30;
+
+$break-small: 400px;
+$break-large: 800px;
+@mixin on-device($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media only screen and (min-width: $break-small) and (max-width: $break-large) {
+      @content;
+    }
+  } @else if $media == large {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+%lookAndFeelBackground{
+  
+  .lookAndFeel{
+    background: $color-main;
+  }
+  .lookAndFeel.red{
+    background: $color-red;
+  }
+  .lookAndFeel.purple{
+    background: $color-purple;
+  }
+  .lookAndFeel.green{
+    background: $color-green;
+  }
+  .lookAndFeel.light-green{
+    background: $color-light-green;
+  }
+  .lookAndFeel.cyan{
+    background: $color-cyan;
+  }
+  .lookAndFeel.blue{
+    background: $color-blue;
+  }
+  .lookAndFeel.light-blue{
+    background: $color-light-blue;
+  }
+  .lookAndFeel.pink{
+    background: $color-pink;
+  }
+  .lookAndFeel.indigo{
+    background: $color-indigo;
+  }
+  .lookAndFeel.orange{
+    background: $color-orange;
+  }
+  .lookAndFeel.deep-orange{
+    background: $color-deep-orange;
+  }
+  .lookAndFeel.amber{
+    background: $color-amber;
+  }
+  .lookAndFeel.gray{
+    background: $color-gray;
+  }
+  .lookAndFeel.blue-gray{
+    background: $color-blue-gray;
+  }
+  .lookAndFeel.black{
+    background: $color-black;
+  }
+
+}
+
+%lookAndFeelBorder{
+  .lookAndFeel{
+    border-color: $color-main;
+  }
+  .lookAndFeel.red{
+    border-color: $color-red;
+  }
+  .lookAndFeel.purple{
+    border-color: $color-purple;
+  }
+  .lookAndFeel.green{
+    border-color: $color-green;
+  }
+  .lookAndFeel.light-green{
+    border-color: $color-light-green;
+  }
+  .lookAndFeel.cyan{
+    border-color: $color-cyan;
+  }
+  .lookAndFeel.blue{
+    border-color: $color-blue;
+  }
+  .lookAndFeel.light-blue{
+    border-color: $color-light-blue;
+  }
+  .lookAndFeel.pink{
+    border-color: $color-pink;
+  }
+  .lookAndFeel.indigo{
+    border-color: $color-indigo;
+  }
+  .lookAndFeel.orange{
+    border-color: $color-orange;
+  }
+  .lookAndFeel.deep-orange{
+    border-color: $color-deep-orange;
+  }
+  .lookAndFeel.amber{
+    border-color: $color-amber;
+  }
+  .lookAndFeel.gray{
+    border-color: $color-gray;
+  }
+  .lookAndFeel.blue-gray{
+    border-color: $color-blue-gray;
+  }
+  .lookAndFeel.black{
+    border-color: $color-black;
+  }
+
+}
+

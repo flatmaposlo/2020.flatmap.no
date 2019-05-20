@@ -1,0 +1,29 @@
+@import "molecule";
+
+.wrap {
+    width: calc(100% - 1rem);
+    max-width: 960px;
+    display: block;
+    margin: 0 auto;
+    clear: both;
+}
+
+  
+footer{
+    .contact{
+        margin-top: $style-margin-large;
+        margin-bottom: $style-margin-medium;
+        text-align: center;
+    }
+    .previous{
+        text-align: center;
+        margin: $style-margin-medium;
+        ul{
+            margin: 0;
+        }
+        li{
+            display: inline-block;
+            margin: $style-margin
+        }
+    }
+}
