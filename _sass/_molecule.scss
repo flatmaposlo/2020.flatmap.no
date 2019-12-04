@@ -11,7 +11,13 @@ h1, h2, h3, h4, h5, h6{
   margin: $style-margin-medium;
   padding: $style-margin-medium;
   font-size: 2rem;
+  cursor: pointer;
   a{
     text-decoration: none;
   }
+}
+
+.button:hover{
+  background: $color-gray-dark-transparent;
+  color: $color-gray-light;
 }
