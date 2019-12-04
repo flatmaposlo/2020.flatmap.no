@@ -15,7 +15,7 @@ body.page.index{
     background-position:100% 0%;
 
     animation-name: backgroundGradient;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
 
@@ -56,7 +56,7 @@ body.page.index{
             filter: drop-shadow(-4px 5px 8px rgba(0, 0, 0, 0.45));
             max-width: 30%;
             animation-name: dropshadow;
-            animation-duration: 6s;
+            animation-duration: 2s;
             animation-timing-function: ease-in-out;
             animation-iteration-count: 1;
         }
@@ -87,7 +87,7 @@ body.page.index{
     main, footer{
         opacity: 1;
         animation-name: textApare;
-        animation-duration: 6s;
+        animation-duration: 2s;
         animation-delay: 0s;
         animation-fill-mode: after;
         animation-timing-function: ease-in-out;
