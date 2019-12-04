@@ -6,3 +6,9 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+.button{
+  border: $style-border;
+  margin: $style-margin-medium;
+  padding: $style-margin-medium;
+  font-size: 2rem;
+}
